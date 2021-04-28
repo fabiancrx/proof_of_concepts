@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import 'navigation_service.dart';
 
@@ -12,7 +11,7 @@ class Empty extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: TextButton(
           onPressed: () {
-            context.read<Navigate>().state.pop();
+            NavigationService().state.pop();
           },
           child: Text(
             "Try yo get out",

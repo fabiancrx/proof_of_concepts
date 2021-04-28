@@ -5,11 +5,12 @@ import 'navigation_service.dart';
 
 class ComplexViewModel extends ChangeNotifier {
   int _counter;
-  Navigate navigationService;
+  NavigationService navigationService = NavigationService();
 
-  ComplexViewModel(this.navigationService, [this._counter = 0]);
+  ComplexViewModel([this._counter = 0]);
 
   int get counter => _counter;
+
   void increment() {
     ++_counter;
     if (_counter == 7) {
